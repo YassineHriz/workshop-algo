@@ -1,0 +1,36 @@
+ALGORITHME first_task
+VAR 
+    sentence : STRING;
+    newSentence : STRING;
+    numberOfVowels : INTEGER := 0
+    numberOfWords : INTEGER := 0
+
+BEGIN
+    Read(sentence)
+    numberOfWords := sentence.SPLIT(" ").LENGTH
+    sentence := sentence.SPLIT("")
+    FOR i FROM 0 TO sentence.LENGTH DO
+        IF(sentence[i] = /[aeiou]/) THEN 
+            numberOfVowels := numberOfVowels + 1
+        END_IF
+    END_FOR
+END
+
+
+ALGORITHME second_task 
+VAR
+    set1 : ARRAY;
+    set2 : ARRAY;
+    sum : INTEGER := 0
+BEGIN
+    Read(set1)
+    Read(set2)
+    FOR i FROM 0 TO set1.length-1 DO
+        FOR j FROM 0 TO set2.length - 1 DO
+            IF(set1[i] = set2[j]) DO
+                sum = sum + set1[i]
+            END_IF
+        END_FOR
+    END_FOR
+    Write(sum)
+END
